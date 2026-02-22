@@ -1,4 +1,4 @@
 import streamlit as st
 
-st.title('teste')
-st.write('aplicativo teste')
+st.title('Machine Learning App')
+st.write('This app buils a machine learning model!')
