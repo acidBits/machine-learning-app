@@ -12,3 +12,7 @@ with st.expander('Dados'):
 
 with st.expander('Visualizacao de Dados'):
   st.scatter_chart(df,x='bill_length_mm',y='body_mass_g',color='species')
+
+with st.sidebar:
+  st.header('Entrada de Atributos')
+
