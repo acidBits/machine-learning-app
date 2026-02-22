@@ -20,5 +20,4 @@ with st.sidebar:
   bill_length_mm = st.slider('Bill length(mm):', df['bill_length_mm'].min(), df['bill_length_mm'].max(), df['bill_length_mm'].mean())
   bill_depth_mm = st.slider('Bill depth(mm):', df['bill_depth_mm'].min(), df['bill_depth_mm'].max(), df['bill_depth_mm'].mean())
   
-  body_mass_g = st.slider('body_mass(g):', 2700, 6300, df['body_mass_g'].mean())
-  
+  body_mass_g = st.slider('body_mass(g):', 2700, 6300, 4000)  
