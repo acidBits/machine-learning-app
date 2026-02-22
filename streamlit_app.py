@@ -19,5 +19,5 @@ with st.sidebar:
   gender = st.selectbox('Gender:', df['sex'].unique())
   bill_length_mm = st.slider('Bill length(mm):',32.1, 59.6, 40.0)
   bill_depth_mm = st.slider('Bill depth(mm):',13.1,27.5,18.0)
-  flipper_length_mm = st.slider('flipper_length(mm)',172,231,200)
-  
+  flipper_length_mm = st.slider('flipper_length(mm):',172,231,200)
+  body_mass_g = st.slider('body_mass(g):',2700,6300,4500)
