@@ -17,4 +17,4 @@ with st.sidebar:
   st.header('Entrada de Atributos')
   island = st.selectbox('Island:', df['island'].unique())
   gender = st.selectbox('Gender:', df['sex'].unique())
-  bill_length_mm = st.slider('Bill length(mm):', 32.1, 59.6, 43)
+  bill_length_mm = st.slider('Bill length(mm):',10,100,50)
