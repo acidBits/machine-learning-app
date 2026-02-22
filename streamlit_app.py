@@ -34,3 +34,8 @@ input_df = pd.DataFrame(data, index=[0])
 
 with st.expander('Dados de Entrada'):
   input_df
+
+#Encode
+encode = ['island','gender']
+df_penguins = pd.get_dummies(input_df, prefix=encode)
+df_penguins
