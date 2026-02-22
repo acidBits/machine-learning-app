@@ -31,4 +31,6 @@ data = {'Island' : island,
         'Sex' : gender}
 
 input_df = pd.DataFrame(data, index=[0])
-st.write(input_df)
+
+with st.expander('Dados de Entrada'):
+  input_df
