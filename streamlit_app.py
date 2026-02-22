@@ -15,4 +15,5 @@ with st.expander('Visualizacao de Dados'):
 
 with st.sidebar:
   st.header('Entrada de Atributos')
+  island = st.selectbox('Island', df['island'].unique())
 
