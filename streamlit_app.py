@@ -21,3 +21,14 @@ with st.sidebar:
   bill_depth_mm = st.slider('Bill depth(mm):',13.1,27.5,18.0)
   flipper_length_mm = st.slider('flipper_length(mm):',172,231,200)
   body_mass_g = st.slider('body_mass(g):',2700,6300,4500)
+
+#Dataframe dos dados de entrada
+data = {'Island' : island,
+        'bill_length_mm' : bill_length_mm,
+        'bill_depth_mm' : bill_depth_mm,
+        'flipper_length_mm' : flipper_length_mm,
+        'body_mass_g' : body_mass_g,
+        'Sex' : gender}
+
+input_df = pd.DataFrame(data, index=[0])
+st.write(input_df)
