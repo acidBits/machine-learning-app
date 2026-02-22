@@ -18,6 +18,3 @@ with st.sidebar:
   island = st.selectbox('Island:', df['island'].unique())
   gender = st.selectbox('Gender:', df['sex'].unique())
   bill_length_mm = st.slider('Bill length(mm):', 32.1, 59.6, 43)
-  bill_depth_mm = st.slider('Bill depth(mm):',13.10, 25.50, 17.16)
-  flipper_length_mm = st.slider('Flipper length(mm):',181,231,205)
-  body_mass_g = st.slider('body_mass(g):', 2700, 6300, 4000)
