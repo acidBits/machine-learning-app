@@ -15,6 +15,6 @@ with st.expander('Visualizacao de Dados'):
 
 with st.sidebar:
   st.header('Entrada de Atributos')
-  island = st.selectbox('* Island:', df['island'].unique())
-  gender = st.selectbox('- Gender:', df['sex'].unique())
-  bill_length_mm = st.slider('- Bill length(mm)', df['bill_length_mm'].min(), df['bill_length_mm'].max(), df['bill_length_mm'].mean() )
+  island = st.selectbox('Island:', df['island'].unique())
+  gender = st.selectbox('Gender:', df['sex'].unique())
+  bill_length_mm = st.slider('Bill length(mm):', df['bill_length_mm'].min(), df['bill_length_mm'].max(), df['bill_length_mm'].mean() )
