@@ -3,8 +3,8 @@ import pandas as pd
 
 df = pd.read_csv('https://raw.githubusercontent.com/dataprofessor/data/master/penguins_cleaned.csv')
 
-st.title('Machine Learning App')
-st.info('This app buils a machine learning model!')
+st.title('Aplicativo de Aprendizado de Maquina')
+st.info('Este aplicativo constroi um modelo de aprendizado de maquina que realiza a predicao de especies de pinguim!')
 
 with st.expander('Dataset'):
   st.write('**Dados Brutos**')
