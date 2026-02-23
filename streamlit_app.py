@@ -46,6 +46,6 @@ with st.expander('Dados de Entrada'):
 
 #data preparation
 encode = ['island','sex']
-df_penguin = pd.get_dummies(input_penguin,prefix=encode)
+df_penguin = pd.get_dummies(input_penguin,columns=[encode])
 
 
