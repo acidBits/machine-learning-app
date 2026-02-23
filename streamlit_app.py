@@ -79,3 +79,27 @@ df_prediction_proba.rename(columns={0: 'Adelie',
 
 #Display predict species
 st.subheader('Predicted Specie')
+st.dataframe(df_prediction_proba,
+            column_confuig={
+              'Adelie':st.column_config.ProgressColum(
+                'Adelie',
+                format='%f',
+                width='medium',
+                min_value=0,
+                max_value=1
+              ),
+              'Chinstrap':st.column_config.ProgressColum(
+                'Chinstrap',
+                format='%f',
+                width='medium',
+                min_value=0,
+                max_value=1
+              ),
+              'Gentoo':st.column_config.ProgressColum(
+                'Gentoo',
+                format='%f',
+                width='medium',
+                min_value=0,
+                max_value=1
+              ),
+              }, hide_index=True)
