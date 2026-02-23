@@ -4,7 +4,7 @@ import pandas as pd
 df = pd.read_csv('https://raw.githubusercontent.com/dataprofessor/data/master/penguins_cleaned.csv')
 
 st.title('🤖 Pinguim ML')
-st.info('Aplicativo de classificacao de especies de pinguim 🐧')
+st.info('Aplicativo de Classificacao de Especies de Pinguim 🐧')
 
 with st.expander('Dataset'):
   st.write('**Dados Brutos**')
