@@ -14,7 +14,8 @@ with st.expander('Visualizacao de Dados'):
   st.scatter_chart(df, 
                    x='bill_length_mm', 
                    y='body_mass_g', 
-                   color='species'
+                   color='species',
+                   y_label = 'massa corporal(g)
                   )
 
 with st.sidebar:
