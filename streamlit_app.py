@@ -15,8 +15,9 @@ with st.expander('Visualizacao de Dados'):
                    x='bill_length_mm', 
                    y='body_mass_g', 
                    color='species',
-                   y_label = 'massa corporal (g)',
-                   x_label = 'comprimento bico (mm)'
+                   y_label = 'Massa Corporal (g)',
+                   x_label = 'Comprimento Bico (mm)',
+                   title='Relação entre Comprimento do Bico e Massa Corporal'
                   )
 
 with st.sidebar:
