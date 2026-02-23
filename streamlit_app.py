@@ -38,8 +38,7 @@ data = {'Island' : island,
 
 input_df = pd.DataFrame(data, index=[0])
 
-with st.expander('Dados de Entrada'):
-  input_df
+
 
 #Encode
 encode = ['island','gender']
