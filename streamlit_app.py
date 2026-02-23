@@ -59,11 +59,5 @@ target_mapper = {'Adelie': 0,
 def target_encode(val):
   return target_mapper(val)
 
-y = y_raw.apply(target_encode)
 
-with st.expander('Data Preparation'):
-  st.write('**Encoded X**')
-  X
-  st.write('**Encoded y**')
-  y
 
