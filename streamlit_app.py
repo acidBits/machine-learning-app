@@ -35,8 +35,8 @@ data = {'Island' : island,
         'flipper_length_mm' : flipper_length_mm,
         'body_mass_g' : body_mass_g,
         'Sex' : gender}
-
-input_df = pd.DataFrame(data, index=[0])
+with st.expander('Dados de Entrada'):
+  input_df = pd.DataFrame(data, index=[0])
 
 
 
