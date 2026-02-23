@@ -16,7 +16,7 @@ with st.expander('Visualizacao de Dados'):
                    y='body_mass_g', 
                    color='species',
                    y_label = 'massa corporal (g)',
-                   x_label = 'comprimento bico (mm)'
+                   x_label = 'comprimento bico (mm)',
                    color_label = 'Especies'
                   )
 
