@@ -77,4 +77,5 @@ df_prediction_proba.rename(columns={0: 'Adelie',
                                  1: 'Chinstrap',
                                  2: 'Gentoo'})
 
-st.write(df_prediction_proba)
+#Display predict species
+st.subheader('Predicted Specie')
