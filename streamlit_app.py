@@ -35,12 +35,12 @@ data = {'Island' : island,
         'flipper_length_mm' : flipper_length_mm,
         'body_mass_g' : body_mass_g,
         'Sex' : gender}
-with st.expander('Dados de Entrada'):
-  input_df = pd.DataFrame(data, index=[0])
 
-
+input_df = pd.DataFrame(data, index=[0])
 
 #Encode
 encode = ['island','gender']
 df_penguins = pd.get_dummies(input_df, prefix=encode)
-df_penguins
+
+with st.expander('Dados de Entrada'):
+  df_penguins
