@@ -6,7 +6,7 @@ df = pd.read_csv('https://raw.githubusercontent.com/dataprofessor/data/master/pe
 st.title('Machine Learning App')
 st.info('This app buils a machine learning model!')
 
-with st.expander('Dados'):
+with st.expander('Dataset'):
   st.write('**Dados Brutos**')
   df
 
