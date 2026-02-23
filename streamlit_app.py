@@ -18,9 +18,9 @@ with st.sidebar:
   island = st.selectbox('Island:', df['island'].unique())
   gender = st.selectbox('Gender:', df['sex'].unique())
   bill_length_mm = st.slider('Bill length(mm):',float(df['bill_length_mm'].min()), float(df['bill_length_mm'].max()), float(df['bill_length_mm'].mean()))
-  bill_depth_mm = st.slider('Bill depth(mm):',13.1,27.5,18.0)
-  flipper_length_mm = st.slider('flipper_length(mm):',172,231,200)
-  body_mass_g = st.slider('body_mass(g):',2700,6300,4500)
+  bill_depth_mm = st.slider('Bill depth(mm):', float(df['bill_depth_mm'].min()), float(df['bill_depth_mm'].max()), float(df['bill_depth_mm'].mean()))
+  flipper_length_mm = st.slider('flipper_length(mm):', float(df['flipper_length_mm'].min()), float(df['flipper_length_mm'].max()), float(df['flipper_length_mm'].mean()))
+  body_mass_g = st.slider('body_mass(g):', float(df['body_mass_g'].min()), float(df['body_mass_g'].max()), float(df['body_mass_g'].mean()))
 
 #Dataframe dos dados de entrada
 data = {'Island' : island,
