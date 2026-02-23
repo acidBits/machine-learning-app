@@ -15,7 +15,8 @@ with st.expander('Visualizacao de Dados'):
                    x='bill_length_mm', 
                    y='body_mass_g', 
                    color='species',
-                   y_label = 'massa corporal(g)'
+                   y_label = 'massa corporal (g)',
+                   x_label = 'comprimento bico (mm)'
                   )
 
 with st.sidebar:
