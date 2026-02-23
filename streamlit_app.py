@@ -1,5 +1,7 @@
 import streamlit as st
 import pandas as pd
+import numpy as np
+from sklearn.ensemble import RandomForestClassifier 
 
 df = pd.read_csv('https://raw.githubusercontent.com/dataprofessor/data/master/penguins_cleaned.csv')
 X_raw = df.drop('species', axis=1)
@@ -61,9 +63,18 @@ def target_encode(val):
 
 y = y_raw.apply(target_encode)
 
-with st.expander('Data Preparation'):
-  st.write('**Encoded X**')
-  X
-  st.write('**Encoded y**')
-  y
+#Treinamento do modelo
+modelo = RandomForestClassifier()
+modelo.fit(X,y)
+
+#Predicao
+prediction = modelo.predict(input_row)
+prediction_proba = modelo.predict_proba(input_row)
+
+df_prediction_proba = pd.DataFrame(prediction_proba)
+df_prediction_proba.columns = ['Adelie', 'Chinstrap', 'Gentoo']
+df_prediction_proba.rename(columns={0: 'Adelie',
+                                 1: 'Chinstrap',
+                                 2: 'Gentoo'})
+
 
