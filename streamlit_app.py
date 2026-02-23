@@ -39,10 +39,13 @@ data = {'Island' : island,
         'Sex' : gender}
 
 input_df = pd.DataFrame(data, index=[0]) 
-df_penguin = pd.concat([input_df,X_raw], axis=0) 
-
-#data preparation
-
+input_penguin = pd.concat([input_df,X_raw], axis=0) 
 
 with st.expander('Dados de Entrada'):
   input_df
+
+#data preparation
+encode = ['island','sex']
+df_penguin = pd.get_dummies(input_penguin,prefix=encode)
+
+
