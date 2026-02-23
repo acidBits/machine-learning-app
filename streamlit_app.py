@@ -31,12 +31,12 @@ with st.sidebar:
   body_mass_g = st.slider('Massa Corporal (g):', float(df['body_mass_g'].min()), float(df['body_mass_g'].max()), float(df['body_mass_g'].mean()))
 
 #Dataframe dos dados de entrada
-data = {'Island' : island,
+data = {'island' : island,
         'bill_length_mm' : bill_length_mm,
         'bill_depth_mm' : bill_depth_mm,
         'flipper_length_mm' : flipper_length_mm,
         'body_mass_g' : body_mass_g,
-        'Sex' : gender}
+        'sex' : gender}
 
 input_df = pd.DataFrame(data, index=[0]) 
 input_penguin = pd.concat([input_df,X_raw], axis=0) 
@@ -44,8 +44,26 @@ input_penguin = pd.concat([input_df,X_raw], axis=0)
 with st.expander('Dados de Entrada'):
   input_df
 
-#data preparation
+#Data preparation (encode X)
 encode = ['island','sex']
 df_penguin = pd.get_dummies(input_penguin,columns=encode,prefix=encode)
 
+X = df_penguin[1:]
+input_row = df_penguin[:1]
+
+#encode y
+target_mapper = {'Adelie': 0,
+                 'Chinstrap': 1,
+                 'Gentoo': 2}
+
+def target_encode(val):
+  return target_mapper(val)
+
+y = y_raw.apply(target_encode)
+
+with st.expander('Data Preparation'):
+  st.write('**Encoded X**')
+  X
+  st.write('**Encoded y**')
+  y
 
