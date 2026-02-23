@@ -11,7 +11,12 @@ with st.expander('Dados'):
   df
 
 with st.expander('Visualizacao de Dados'):
-  st.scatter_chart(df,x='bill_length_mm',y='body_mass_g',color='species')
+  st.scatter_chart(df,x='bill_length_mm',
+                   y='body_mass_g',
+                   color='species', 
+                   y_label="Massa Corporal(g)",
+                   title="Relação entre Comprimento do Bico e Massa Corporal"
+  )
 
 with st.sidebar:
   st.header('Entrada de Atributos')
