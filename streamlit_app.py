@@ -80,7 +80,7 @@ df_prediction_proba.rename(columns={0: 'Adelie',
 #Display predict species
 st.subheader('Predicted Specie')
 st.dataframe(df_prediction_proba,
-            column_confuig={
+            column_config={
               'Adelie':st.column_config.ProgressColumn(
                 'Adelie',
                 format='%f',
