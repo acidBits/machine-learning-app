@@ -17,6 +17,7 @@ with st.expander('Visualizacao de Dados'):
                    color='species',
                    y_label = 'massa corporal (g)',
                    x_label = 'comprimento bico (mm)'
+                   color_label = 'Especies'
                   )
 
 with st.sidebar:
