@@ -2,8 +2,8 @@ import streamlit as st
 import pandas as pd
 
 df = pd.read_csv('https://raw.githubusercontent.com/dataprofessor/data/master/penguins_cleaned.csv')
-X = df.drop('species', axis=1)
-y = df['species']
+X_raw = df.drop('species', axis=1)
+y_raw = df['species']
 
 st.title('🤖 Pinguim ML')
 st.info('Aplicativo de Classificacao de Especies de Pinguim 🐧')
@@ -39,6 +39,10 @@ data = {'Island' : island,
         'Sex' : gender}
 
 input_df = pd.DataFrame(data, index=[0]) 
+df_penguin = pd.concat([input_df,X_raw], axis=0) 
+
+#data preparation
+
 
 with st.expander('Dados de Entrada'):
   input_df
