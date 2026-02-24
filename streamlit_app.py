@@ -33,14 +33,15 @@ with st.sidebar:
   body_mass_g = st.slider('Massa Corporal (g):', float(df['body_mass_g'].min()), float(df['body_mass_g'].max()), float(df['body_mass_g'].mean()))
 
 #Dataframe dos dados de entrada
-data = {'island' : island,
+dados_entrada = {'island' : island,
         'bill_length_mm' : bill_length_mm,
         'bill_depth_mm' : bill_depth_mm,
         'flipper_length_mm' : flipper_length_mm,
         'body_mass_g' : body_mass_g,
         'sex' : gender}
 
-input_df = pd.DataFrame(data, index=[0]) 
+#Dados de Entrada
+input_df = pd.DataFrame(dados_entrada, index=[0]) 
 input_penguin = pd.concat([input_df,X_raw], axis=0) 
 
 with st.expander('Dados de Entrada'):
@@ -77,8 +78,8 @@ df_prediction_proba.rename(columns={0: 'Adelie',
                                  1: 'Chinstrap',
                                  2: 'Gentoo'})
 
-#Display predict species
-st.subheader('Predicted Specie')
+#Display de previsao de especies
+st.subheader('Especie Prevista')
 st.dataframe(df_prediction_proba,
             column_config={
               'Adelie':st.column_config.ProgressColumn(
