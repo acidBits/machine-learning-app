@@ -7,8 +7,8 @@ df = pd.read_csv('https://raw.githubusercontent.com/dataprofessor/data/master/pe
 X_raw = df.drop('species', axis=1)
 y_raw = df['species']
 
-st.title('🤖 Pinguim ML')
-st.info('Aplicativo de Classificacao de Especies de Pinguim 🐧')
+st.title('🐧    Pinguim ML')
+st.info('Aplicativo de Classificacao de Especies de Pinguim')
 
 with st.expander('Dataset'):
   st.write('**Dados Brutos**')
